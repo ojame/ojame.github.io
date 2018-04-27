@@ -1,0 +1,173 @@
+html {
+  font-family: Tahoma,Verdana,Segoe,sans-serif;
+}
+
+#container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.group {
+  margin-bottom: 150px;
+  float: left;
+  width: 100%;
+}
+
+.games {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.game {
+  height: 50px;
+  position: relative;
+  padding: 10px 0;
+}
+
+.team {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  margin: 5px 0;
+}
+
+.shot, .missed, .goal {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: calc(50% - 5px);
+  z-index: 20;
+}
+
+.missed {
+  width: 6px;
+  height: 6px;
+  top: calc(50% - 3px);
+}
+
+.goal {
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+}
+
+.shot, .name {
+  opacity: 0.6;
+}
+
+.goal {
+  opacity: 0.8;
+}
+
+.missed {
+  opacity: 0.4;
+}
+
+.time_zero, .time_twenty, .time_forty, .time_sixty {
+  width: 1px;
+  background: rgb(180, 180, 180);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.time_zero {
+  left: 0;
+}
+
+.time_twenty {
+  left: 33.3%;
+}
+
+.time_forty {
+  left: 66.6%;
+}
+
+.time_sixty {
+  left: 100%;
+}
+
+.time_zero::after, .time_twenty::after, .time_forty::after, .time_sixty::after {
+  color: rgb(180, 180, 180);
+  font-size: 0.6rem;
+  position: absolute;
+  left: -5px;
+  width: 10px;
+  text-align: center;
+  bottom: -15px;
+}
+
+.time_zero::after {
+  content: '0';
+}
+
+.time_twenty::after {
+  content: '20';
+}
+
+.time_forty::after {
+  content: '40';
+}
+
+.time_sixty::after {
+  content: '60';
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: normal;
+  margin: 1em 0 0.5em 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.round {
+  position: absolute;
+  left: -61px;
+  top: 26px;
+  font-size: 0.75rem;
+}
+
+.game:nth-child(even) {
+  background: rgb(243, 243, 243);
+}
+
+.legend table {
+  text-align: center;
+  margin: 30px auto 70px auto;
+}
+
+tr {
+  margin-bottom: 15px;
+}
+
+th {
+  font-weight: normal;
+  font-size: 0.75rem;
+}
+
+.legend .missed, .legend .shot, .legend .goal {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.spam {
+  font-size: 0.75rem;
+  text-align: center;
+}
